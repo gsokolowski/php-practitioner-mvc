@@ -1,0 +1,39 @@
+// to oznacza load every single classes from all folders from top of the tree
+// when you use classmap you need to
+// every time you add new class you need to rebuild aoutolad
+// composer dump-autoload -o
+{
+  "autoload": {
+    "classmap": [
+     "./"
+    ]
+  }
+}
+
+// to oznacza load all classes from controlles path
+{
+  "autoload": {
+    "classmap": [
+     "controllers/"
+    ]
+  }
+}
+
+// http://www.php-fig.org/psr/psr-4/
+// https://www.youtube.com/watch?v=VGSerlMoIrY
+// autoload with psr-4 specification
+// you need to call in console
+// composer dump-autoload -o an it will create vendor/files
+// Greg is namespace but you need to escape backslash so you have 2 backslashes \\
+// "src" is where location to code directory is
+// every time you add new class you need to rebuild aoutolad
+// if you use psr-4 you don't need to do composer dump-autoload -o
+// everything is loaded automatically
+
+{
+  "autoload": {
+    "psr-4": {
+      "Greg\\": "src"
+    }
+  }
+}
